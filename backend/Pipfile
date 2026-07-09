@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==5.0.6"
+djangorestframework = "==3.15.1"
+django-cors-headers = "==4.4.0"
+python-dotenv = "==1.0.1"
+psycopg2-binary = "==2.9.9"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+
+[scripts]
+server = "python manage.py runserver"
+migrate = "python manage.py migrate"
+makemigrations = "python manage.py makemigrations"
+test = "python manage.py test"
+seed = "python manage.py seed_demo"
