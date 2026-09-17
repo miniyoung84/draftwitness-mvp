@@ -1,9 +1,9 @@
-# DraftWitness — Initial GitHub Issues
+# DraftWitness — Roadmap
 
-The GitHub CLI was not available in the build environment, so the suggested
-starter issues are captured here. Paste each into a new GitHub issue
-(repo: `miniyoung84/draftwitness-mvp`). Titles, descriptions, priority, and
-acceptance criteria are ready to copy.
+Prioritized next steps for the MVP, written as ready-to-file issues (title,
+priority, description, acceptance criteria). This project is no longer under
+active development, so these are left here as a record of what a v1 would have
+needed. See the [project status](../README.md#project-status) in the README.
 
 Scope guardrails for all issues: **no AI detection, no marketplace, no payments,
 no blockchain, no external identity verification, no new third-party

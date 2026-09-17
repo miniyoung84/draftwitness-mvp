@@ -26,3 +26,7 @@ yarn-error.log*
 .idea/
 .vscode/
 *.swp
+
+# --- Build artifacts / tooling ---
+*.tsbuildinfo
+.claude/

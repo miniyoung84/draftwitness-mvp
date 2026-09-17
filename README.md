@@ -14,13 +14,35 @@ possible AI use. See [`docs/product-spec.md`](docs/product-spec.md),
 [`docs/certification-standard.md`](docs/certification-standard.md), and
 [`docs/threat-model.md`](docs/threat-model.md).
 
+## Project status
+
+**Archived / not under active development.** This was an MVP built to
+test whether "proof of human authorship" for creative writing is a viable
+product. The technical slice works end to end (see the demo flow below), but the
+conclusion of the market research was no:
+
+- The category is crowded with near-identical products (Vellumproof,
+  ValidDraft, Authortegrity, Grammarly Authorship, Turnitin Clarity).
+- Publishers and agents rarely require proof of human authorship, so the
+  certificate has no consistent counterparty.
+- Process evidence is fundamentally corroborative, not conclusive: a human
+  retyping AI-generated text is indistinguishable from a human composing, and
+  keystroke-timing forgery is trivial. The [threat model](docs/threat-model.md)
+  was written to say so plainly.
+
+The code is published as-is under the MIT license. The most reusable pieces are
+the hash-chained event log (`backend/api/hashchain.py`) and the threat model /
+certification-language docs. A prioritized [roadmap](docs/roadmap.md) records
+what a v1 would have needed.
+
 ## Repository structure
 
 ```
 draftwitness-mvp/
   backend/     Django + DRF API (hash-chained event log, review, certificates)
   frontend/    Next.js + TypeScript app (editor, dashboard, review, certificates)
-  docs/        Product spec, certification standard, threat model
+  docs/        Product spec, certification standard, threat model, roadmap
+  .github/     CI (backend tests, frontend typecheck + build)
   README.md
 ```
 
@@ -124,3 +146,7 @@ and detects exactly this. See `backend/api/hashchain.py` (heavily commented).
 
 There is **no blockchain**, no AI detection, no payments, and no marketplace —
 by design for this MVP.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
